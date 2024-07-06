@@ -21,7 +21,30 @@ func main () {
 ```Go
 fmt.Println ("")
 ```
+# ARRAY
+- Arrays are considered values rather than pointers and represent the entirety of the array. Whenever an array is passed to a function, a copy is created, resulting in additional memory usage. To avoid this, it is possible to pass a pointer to an array, or use slices instead. The size of the array is constant and it must be known at compile time .
+- 
 
+```go
+
+package main
+import "fmt"
+
+func main () {
+ 
+var nu =[3]int{1,3,4,};
+nu2 := [3]init {2,4,5};
+fmt.Println (nu);
+fmt.Println(nu2);
+};
+```
+
+
+
+
+# FUNCTION 
+# LINKED LIST
+# QUEUE
 
 # API Development with the 
 -  Go Fiber comes with the zero memory allocation and prformance in mind .It main aim is for the high performance and low latecy .
