@@ -1,5 +1,5 @@
 # Go Lang
-- Go uses the garbase collecttion for the memory management. This automaticalyy handle the memory allocation and delocation but can introduce the latency due to GC pauses .
+- Go uses the garbage collecttion for the memory management. This automaticalyy handle the memory allocation and delocation but can introduce the latency due to GC pauses .
 - TGo provide the goroutine for the lightweight concurrent executions and channels for the communication between them . 
 - These two commands are the most important command for the execution of the things . 
 - go build filename.go
