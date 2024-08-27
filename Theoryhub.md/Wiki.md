@@ -98,9 +98,31 @@ fmt.Println(person{"KAusik",30})
 
 ```
 
-# API Development with the 
+# API Development with the GO lang
 -  Go Fiber comes with the zero memory allocation and prformance in mind .It main aim is for the high performance and low latecy .
 - `Fiber` It represents the fiber package where you start to create an instance .
 - `App` The app instance conventially denotes the fiber application .
-- ` Ctx` The Ctx struct holds the Http request and response .
-
+- `Ctx` The Ctx struct holds the Http request and response .
+- `Handler` are the first component of the api it is responsible for executing the application logic and for writting HTTP response headers and bodies .
+- `Router` This is also known as the servermux this stores a mapping between the URL patterns for your application and the corresponding handllers . Usually one servermux is per application controll whole of routes .
+-` webserver`  it listen incoming request as part of your application itself.
+# The defaultserveMux
+- `http.Handle () and http.HandleFunc()` These allow you to register routes without declaring servermux . This is not recomended for the production application 
+```GO
+func main() {
+http.HandleFunc("/", home)
+http.HandleFunc("/snippet", showSnippet)
+http.HandleFunc("/snippet/create", createSnippet)
+log.Println("Starting server on :4000")
+err := http.ListenAndServe(":4000", nil)
+log.Fatal(err)
+}
+```
+- Servermux will always dispatches the pattern that have the longest URL if there is any conflicts among the multiple requests .
+- The http.Error Shortcut `http.Error` is lightweight helper function takes given message and status code then calls the w.WriteHeader() w.write () methods behind the scenes for us .
+# Manipulating the Header Map
+- `w.Header().Set` to add a new header to the response header map .
+- `w.Header().Add('')` to add new cache-control
+- `w.Header().Del('')` to Delete all values for the cache-control
+- `w.Header().Get('')` to retirive the first value for the cache-control.
+- Go will send the automatically set of three system-generated header for you date and content-length and the content type .
