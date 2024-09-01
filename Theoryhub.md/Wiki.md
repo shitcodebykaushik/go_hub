@@ -5,6 +5,18 @@
 - go build filename.go
 - go run filename.go 
  This is the most important thing in the go lang to start the code execution .
+ # Go 
+- MVC stands for the Model-View- Controller it is the design pattern used in software engineering to seperate the concerns in the development of applications . Model is data or businees logic of the application , View is the user interface and cotroller as as intermediary between model and the view .
+- Handler 
+- Router (servermux in Go terminology)
+- Web server One of the great things about Go is that you can establish a web server and listen for incoming requests as part of application itself .
+- Each time web server listening new HTTP request it will pass the request on the servermux in turn the servermux will check the URL path and dispatch the request to the matching handler .\
+- The TCP network address that you pass to the http.ListenAndServe() should be in the format "host:port". If we omit the host then the server will listen on all your computers available .
+- We use log.Println() and log.Fatal() functions to output log message.Both these function output messages via GO 'standards' .
+- log.fatal () function will also call os.exit(1) after writing the message causing the application to immediately exit 
+- Go servermux supports two different types of URL patterns: fixed paths and the subtree paths .
+   - Fixed path dont end with the trailing slash whereas subtree paths do end with a trailing slash .
+   
 
 ```Go
 package main 
