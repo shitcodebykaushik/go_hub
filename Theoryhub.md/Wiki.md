@@ -30,9 +30,24 @@ func main () {
 ```
 # Priniting the input 
 - The below command is use to print the value of the go . 
+- `fmt` It is the built in the function for formatted input ans output. It scans the input from the various sorces .
 ```Go
+import "fmt" 
+func main () {
 fmt.Println ("")
+}
 ```
+
+
+
+
+
+
+
+
+
+
+
 # ARRAY
 - Arrays are considered values rather than pointers and represent the entirety of the array. Whenever an array is passed to a function, a copy is created, resulting in additional memory usage. To avoid this, it is possible to pass a pointer to an array, or use slices instead. The size of the array is constant and it must be known at compile time .
 - 
